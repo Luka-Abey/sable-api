@@ -9,7 +9,6 @@ from .models import Show
 
 class ScheduleView(APIView):
   def get(self, request, *args, **kwargs):
-    data = {
-      'name': 'sugar'
-    }
-    return Response(data)
+    qs = Show.objects.all()
+    serializer = ShowSerializer(qs, many=True)
+    return Response(serializer.data)
