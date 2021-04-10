@@ -1,3 +1,9 @@
 from django.db import models
 
-# Create your models here.
+class Show(models.Model):
+  name = models.CharField(max_length=100, editable=True)
+  date_time = models.DateTimeField(editable=True)
+  live = models.BooleanField(default=True, editable=True)
+
+  def __str__(self):
+    return self.name
