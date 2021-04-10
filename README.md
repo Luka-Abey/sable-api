@@ -1,6 +1,6 @@
 ### Sable Radio API
 
-API component for Sable Radio website. Currently to store and pass schedule data.
+API component for Sable Radio website. Currently to store, receive, and update schedule data.
 
 ### Run locally
 
