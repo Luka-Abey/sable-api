@@ -36,7 +36,8 @@ ALLOWED_HOSTS = [
     '0.0.0.0',
     'localhost',
     '127.0.0.1',
-    'sable-api.herokuapp.com'
+    'sable-api.herokuapp.com',
+    'sable-radio.herokuapp.com',
 ]
 
 
