@@ -4,4 +4,4 @@ from .models import Show
 class ShowSerializer(serializers.ModelSerializer):
   class Meta:
     model = Show
-    fields = ('id', 'name', 'date_time', 'live')
+    fields = ('id', 'name', 'date_time', 'end_time', 'live')
