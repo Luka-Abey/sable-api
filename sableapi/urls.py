@@ -19,5 +19,5 @@ from schedule.views import ScheduleView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', ScheduleView.as_view()),
+    path('api/schedule', ScheduleView.as_view()),
 ]
