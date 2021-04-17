@@ -19,7 +19,7 @@ class CurrentShowView(APIView):
   def get(self, request, *args, **kwargs):
     time_now = datetime.now()
     this_show = Show.objects.get(
-      Q(date_time <= time_now),
+      Q(self.date_time < time_now),
       Q(time_now < end_time ) 
     )
     serializer = ShowSerializer(this_show, many=False)
