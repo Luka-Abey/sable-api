@@ -22,7 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/schedule', ScheduleView.as_view()),
     path('api/schedule/currentshow', CurrentShowView.as_view()),
-    # HERE NEED TO POINT TO SPECIFIC ID OR RESIDENT NAME
-    path('api/residents/:/$/etc', SingleResidentView.as_view()),
     path('api/residents', ResidentsView.as_view()),
+    # HERE NEED TO POINT TO SPECIFIC ID OR RESIDENT NAME
+    path('api/residents/:# SOME KIND OF VARIABLE SIGNIFIER/$/etc', SingleResidentView.as_view()),
 ]

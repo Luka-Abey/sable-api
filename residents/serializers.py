@@ -1,9 +1,9 @@
 from rest_framework import serializers
-from .models import Show
+from .models import Resident
 
 class ResidentSerializer(serializers.ModelSerializer):
   class Meta:
-    model = Show
+    model = Resident
     fields = (
       'id',
       'name',
