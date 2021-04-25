@@ -24,5 +24,5 @@ urlpatterns = [
     path('api/schedule/currentshow', CurrentShowView.as_view()),
     path('api/residents', ResidentsView.as_view()),
     # HERE NEED TO POINT TO SPECIFIC ID OR RESIDENT NAME
-    path('api/residents/:# SOME KIND OF VARIABLE SIGNIFIER/$/etc', SingleResidentView.as_view()),
+    path('api/residents/<str:name>', SingleResidentView.as_view()),
 ]

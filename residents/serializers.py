@@ -12,4 +12,12 @@ class ResidentSerializer(serializers.ModelSerializer):
       'show_frequency',
       'mix_url_one',
       'mix_url_two',
-      'mix_url_three')
+      'mix_url_three',
+      'soundcloud_url',
+      'mixcloud_url',
+      'facebook_url',
+      'twitter_url',
+      'instagram_url',
+      'bandcamp_url',
+      'youtube_url',
+      )
