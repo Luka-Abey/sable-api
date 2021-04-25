@@ -24,5 +24,6 @@ urlpatterns = [
     path('api/schedule/currentshow', CurrentShowView.as_view()),
     path('api/residents', ResidentsView.as_view()),
     # HERE NEED TO POINT TO SPECIFIC ID OR RESIDENT NAME
-    path('api/residents/<str:name>', SingleResidentView.as_view()),
+    # https://www.webforefront.com/django/accessurlparamstemplates.html
+    path('api/residents/<int:id>', SingleResidentView.as_view()),
 ]
