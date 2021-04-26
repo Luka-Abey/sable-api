@@ -17,7 +17,7 @@ class ResidentsView(APIView):
 
 class SingleResidentView(APIView):
   def get(self, request, *args, **kwargs):
-    this_resident_name = request.query_params.get('id')
+    this_resident_name = self.kwargs['id']
     print(this_resident_name)
     this_resident = Resident.objects.get(id=1)
     serializer = ResidentSerializer(this_resident, many=False)
