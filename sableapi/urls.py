@@ -16,14 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from schedule.views import ScheduleView, CurrentShowView
-from residents.views import ResidentsView, SingleResidentView
+from residents.views import ResidentsView, SingleResidentView, SearchResidentsView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/schedule', ScheduleView.as_view()),
     path('api/schedule/currentshow', CurrentShowView.as_view()),
     path('api/residents', ResidentsView.as_view()),
-    # HERE NEED TO POINT TO SPECIFIC ID OR RESIDENT NAME
-    # https://www.webforefront.com/django/accessurlparamstemplates.html
     path('api/residents/<int:id>', SingleResidentView.as_view()),
+    path('api/residents/search/<search>', SearchResidentsView.as_view()),
 ]

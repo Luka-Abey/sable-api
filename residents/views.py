@@ -21,3 +21,13 @@ class SingleResidentView(APIView):
     this_resident = Resident.objects.get(id=this_resident_id)
     serializer = ResidentSerializer(this_resident, many=False)
     return Response(serializer.data)
+
+class SearchResidentsView(APIView):
+  def get(self, request, *args, **kwargs):
+    query_string = self.kwargs['search']
+    filtered_residents = Resident.objects.filter(
+      Q(name__icontains=query_string) |
+      Q(description__icontains=query_string)
+    )
+    serializer = ResidentSerializer(filtered_residents, many=True)
+    return Response(serializer.data)
