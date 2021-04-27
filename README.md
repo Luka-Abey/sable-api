@@ -2,6 +2,18 @@
 
 API component for Sable Radio website. Currently to store, receive, and update schedule data.
 
+Available endpoint URLs:
+| URL | Accessed Data  | Notes |
+--- | --- | ---
+| /api/schedule | returns all shows in database | if schedule is implemented, will need to match this on current weekata3 |
+| /api/schedule/currentshow | returns show which matches time.now | |
+
+
+- /api/schedule/currentshow
+- 
+- /api/residents/
+- /api/residents/search/<query_string>
+
 ### Run locally
 
 Clone the repo to your local machine, make sure you are in the root directory and:
