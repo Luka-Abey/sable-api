@@ -28,4 +28,6 @@ class AllResidentsSerializer(serializers.ModelSerializer):
     fields = (
       'id',
       'name',
+      'image_url',
+      'show_frequency',
       )
