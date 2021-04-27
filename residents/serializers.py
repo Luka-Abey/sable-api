@@ -4,7 +4,10 @@ from .models import Resident
 class ResidentSerializer(serializers.ModelSerializer):
   class Meta:
     model = Resident
-    optional_fields = [
+    fields = (
+      'id',
+      'name',
+      'description',
       'image_url',
       'show_frequency',
       'mix_url_one',
@@ -17,9 +20,4 @@ class ResidentSerializer(serializers.ModelSerializer):
       'instagram_url',
       'bandcamp_url',
       'youtube_url',
-    ]
-    fields = (
-      'id',
-      'name',
-      'description',
       )
