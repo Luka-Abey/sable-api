@@ -8,7 +8,7 @@ Available endpoint URLs:
 | /api/schedule | returns all shows in database | if schedule is implemented, will need to match this on current week |
 | /api/schedule/currentshow | returns show which matches time.now | |
 | /api/residents | returns all residents | |
-| /api/residents/<id> | returns resident with matching id | |
+| /api/residents/\<id> | returns resident with matching id | |
 | /api/residents/search/<query_string> | returns residents matching with query | matches `name` and `description`|
 
 ### Run locally
