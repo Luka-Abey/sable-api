@@ -21,3 +21,11 @@ class ResidentSerializer(serializers.ModelSerializer):
       'bandcamp_url',
       'youtube_url',
       )
+
+class AllResidentsSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Resident
+    fields = (
+      'id',
+      'name',
+      )

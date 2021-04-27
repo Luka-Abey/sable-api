@@ -6,13 +6,13 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from datetime import datetime, timedelta
 
-from .serializers import ResidentSerializer
+from .serializers import ResidentSerializer, AllResidentsSerializer
 from .models import Resident
 
 class ResidentsView(APIView):
   def get(self, request, *args, **kwargs):
     qs = Resident.objects.all()
-    serializer = ResidentSerializer(qs, many=True)
+    serializer = AllResidentsSerializer(qs, many=True)
     return Response(serializer.data)
 
 class SingleResidentView(APIView):
@@ -29,5 +29,5 @@ class SearchResidentsView(APIView):
       Q(name__icontains=query_string) |
       Q(description__icontains=query_string)
     )
-    serializer = ResidentSerializer(filtered_residents, many=True)
+    serializer = AllResidentsSerializer(filtered_residents, many=True)
     return Response(serializer.data)
