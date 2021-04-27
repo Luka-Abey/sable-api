@@ -5,7 +5,7 @@ API component for Sable Radio website. Currently to store, receive, and update s
 Available endpoint URLs:
 | URL | Accessed Data  | Notes |
 --- | --- | ---
-| `/api/schedule` | returns all shows in database | if schedule is implemented, will need to match this on current week |
+| `/api/schedule` | returns all shows in database | if schedule is implemented, will need to filter this for current week |
 | `/api/schedule/currentshow` | returns show which matches time.now | |
 | `/api/residents` | returns all residents | |
 | `/api/residents/<id>` | returns resident with matching id | |
