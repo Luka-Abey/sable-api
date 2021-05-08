@@ -10,6 +10,8 @@ Available endpoint URLs:
 | `/api/residents` | returns all residents | |
 | `/api/residents/<id>` | returns resident with matching id | |
 | `/api/residents/search/<query_string>` | returns residents matching with query | matches `name` and `description`|
+| `/api/banner` | returns all banner members | iterate through array|
+
 
 ### Run locally
 
