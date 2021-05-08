@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from schedule.views import ScheduleView, CurrentShowView
+from banner.views import BannerView
 from residents.views import ResidentsView, SingleResidentView, SearchResidentsView
 
 urlpatterns = [
@@ -25,4 +26,5 @@ urlpatterns = [
     path('api/residents', ResidentsView.as_view()),
     path('api/residents/<int:id>', SingleResidentView.as_view()),
     path('api/residents/search/<search>', SearchResidentsView.as_view()),
+    path('api/banner', BannerView.as_view())
 ]
