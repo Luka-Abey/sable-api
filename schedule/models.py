@@ -7,5 +7,5 @@ class Show(models.Model):
   live = models.BooleanField(default=True, editable=True)
 
   def __str__(self):
-    start_time = str(self.date_time)
+    start_time = self.date_time
     return f'{self.name} at {start_time.strftime("%d/%m/%Y")}'
