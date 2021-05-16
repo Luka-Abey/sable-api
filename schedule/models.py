@@ -7,4 +7,4 @@ class Show(models.Model):
   live = models.BooleanField(default=True, editable=True)
 
   def __str__(self):
-    return self.name
+    return self
