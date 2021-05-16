@@ -8,4 +8,4 @@ class Show(models.Model):
 
   def __str__(self):
     start_time = self.date_time
-    return f'{self.name} at {start_time.strftime("%d/%m/%Y")}'
+    return f'{start_time.strftime("%d/%m/%Y")} - {self.name}'
