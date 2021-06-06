@@ -18,6 +18,7 @@ from django.urls import path, include
 from schedule.views import ScheduleView, CurrentShowView
 from banner.views import BannerView
 from residents.views import ResidentsView, SingleResidentView, SearchResidentsView
+from blogs.views import BlogsView, SingleBlogView, SearchBlogsView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,5 +27,8 @@ urlpatterns = [
     path('api/residents', ResidentsView.as_view()),
     path('api/residents/<int:id>', SingleResidentView.as_view()),
     path('api/residents/search/<search>', SearchResidentsView.as_view()),
-    path('api/banner', BannerView.as_view())
+    path('api/banner', BannerView.as_view()),
+    path('api/blogs', BlogsView.as_view()),
+    path('api/blogs/<int:id>', SingleBlogView.as_view()),
+    path('api/blogs/search/<search>', SearchBlogsView.as_view()),
 ]
