@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'schedule',
     'residents',
     'banner',
+    'blogs',
 ]
 
 MIDDLEWARE = [
