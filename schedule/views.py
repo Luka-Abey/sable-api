@@ -18,8 +18,12 @@ class ScheduleView(APIView):
 class CurrentShowView(APIView):
   def get(self, request, *args, **kwargs):
     time_now = datetime.now() + timedelta(hours=1)
-    this_show = Show.objects.get(
-      Q(date_time__lte=time_now) & Q(end_time__gt=time_now) 
-    )
-    serializer = ShowSerializer(this_show, many=False)
-    return Response(serializer.data)
+    try:
+      this_show = Show.objects.get(
+        Q(date_time__lte=time_now) & Q(end_time__gt=time_now) 
+      )
+      serializer = ShowSerializer(this_show, many=False)
+      return Response(serializer.data)
+    
+    except:
+      return {}
