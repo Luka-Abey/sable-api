@@ -17,7 +17,7 @@ class BlogsView(APIView):
 
 class SingleBlogView(APIView):
   def get(self, request, *args, **kwargs):
-    this_blog_name = urllib.parse.unquote(self.kwargs['id'])
+    this_blog_name = urllib.unquote(self.kwargs['id'])
     this_blog = Blog.objects.get(name=this_blog_name)
     serializer = BlogSerializer(this_blog, many=False)
     return Response(serializer.data)
