@@ -29,6 +29,6 @@ urlpatterns = [
     path('api/residents/search/<search>', SearchResidentsView.as_view()),
     path('api/banner', BannerPlusView.as_view()),
     path('api/blogs', BlogsView.as_view()),
-    path('api/blogs/<int:id>', SingleBlogView.as_view()),
+    path('api/blogs/<id>', SingleBlogView.as_view()),
     path('api/blogs/search/<search>', SearchBlogsView.as_view()),
 ]
