@@ -9,6 +9,10 @@ from datetime import datetime, timedelta
 from .serializers import ResidentSerializer, AllResidentsSerializer
 from .models import Resident
 
+def decode(url):
+  decoded_url = url.replace("-", " ").replace("±", "-").replace("|", "/")
+  return decoded_url
+
 class ResidentsView(APIView):
   def get(self, request, *args, **kwargs):
     qs = Resident.objects.all()
@@ -17,7 +21,7 @@ class ResidentsView(APIView):
 
 class SingleResidentView(APIView):
   def get(self, request, *args, **kwargs):
-    this_resident_name = self.kwargs['id'].replace("-", " ")
+    this_resident_name = decode(self.kwargs['id'])
     this_resident = Resident.objects.get(name=this_resident_name)
     serializer = ResidentSerializer(this_resident, many=False)
     return Response(serializer.data)
