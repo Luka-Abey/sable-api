@@ -9,7 +9,7 @@ from .serializers import BlogSerializer, AllBlogsSerializer
 from .models import Blog
 
 def decode(url):
-  decoded_url = url.replace("±", " ").replace("%7C", "/")
+  decoded_url = url.replace("-", " ").replace("±", "-").replace("|", "/")
   return decoded_url
 
 class BlogsView(APIView):
