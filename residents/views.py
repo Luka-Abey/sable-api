@@ -15,7 +15,7 @@ def decode(url):
 
 class ResidentsView(APIView):
   def get(self, request, *args, **kwargs):
-    qs = Resident.objects.all()
+    qs = Resident.objects.order_by('name')
     serializer = AllResidentsSerializer(qs, many=True)
     return Response(serializer.data)
 
