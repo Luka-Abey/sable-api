@@ -1,6 +1,6 @@
 ### Sable Radio API
 
-API component for Sable Radio website. Currently to store, receive, and update schedule data.
+API component for Sable Radio website. Create, read, update + delete functionality for `residents`, `blogs` + `schedule`.
 
 Available endpoint URLs:
 | URL | Accessed Data  | Notes |
@@ -9,7 +9,9 @@ Available endpoint URLs:
 | `/api/schedule/currentshow` | returns show which matches time.now | |
 | `/api/residents` | returns all residents | |
 | `/api/residents/<id>` | returns resident with matching id | |
-| `/api/residents/search/<query_string>` | returns residents matching with query | matches `name` and `description`|
+| `/api/blogs` | returns all blog posts | |
+| `/api/blogs/<id>` | returns blog post with matching id | |
+| `/api/residents/search/<query_string>` | returns residents + blogs matching with query | matches `name` and `description`|
 | `/api/banner` | returns all banner members | iterate through array|
 
 
