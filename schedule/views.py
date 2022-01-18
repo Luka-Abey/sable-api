@@ -4,7 +4,7 @@ from django.db.models import Q
 
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from datetime import datetime, timedelta
+from django.utils import timezone
 
 from .serializers import ShowSerializer
 from .models import Show
@@ -17,7 +17,7 @@ class ScheduleView(APIView):
 
 class CurrentShowView(APIView):
   def get(self, request, *args, **kwargs):
-    time_now = datetime.now() + timedelta(hours=1)
+    time_now = timezone.now()
     try:
       this_show = Show.objects.get(
         Q(date_time__lte=time_now) & Q(end_time__gt=time_now) 
