@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from schedule.views import ScheduleView, CurrentShowView
 from bannerplus.views import BannerPlusView
-from residents.views import ResidentsView, SingleResidentView, SearchResidentsView
+# from residents.views import ResidentsView, SingleResidentView, SearchResidentsView
 from blogs.views import BlogsView, SingleBlogView, SearchBlogsView
 
 urlpatterns = [
