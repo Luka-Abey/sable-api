@@ -19,16 +19,20 @@ from schedule.views import ScheduleView, CurrentShowView
 from bannerplus.views import BannerPlusView
 # from residents.views import ResidentsView, SingleResidentView, SearchResidentsView
 from blogs.views import BlogsView, SingleBlogView, SearchBlogsView
+from projects.views import ProjectsView, SingleProjectView, SearchProjectsView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/schedule', ScheduleView.as_view()),
     path('api/schedule/currentshow', CurrentShowView.as_view()),
-    path('api/residents', ResidentsView.as_view()),
-    path('api/residents/<id>', SingleResidentView.as_view()),
-    path('api/residents/search/<search>', SearchResidentsView.as_view()),
+    # path('api/residents', ResidentsView.as_view()),
+    # path('api/residents/<id>', SingleResidentView.as_view()),
+    # path('api/residents/search/<search>', SearchResidentsView.as_view()),
     path('api/banner', BannerPlusView.as_view()),
     path('api/blogs', BlogsView.as_view()),
     path('api/blogs/<id>', SingleBlogView.as_view()),
     path('api/blogs/search/<search>', SearchBlogsView.as_view()),
+    path('api/projects', ProjectsView.as_view()),
+    path('api/projects/<id>', SingleProjectView.as_view()),
+    path('api/projects/search/<search>', SearchProjectsView.as_view()),
 ]
