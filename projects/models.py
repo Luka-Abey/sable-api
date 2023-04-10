@@ -20,4 +20,4 @@ class Project(models.Model):
   date          = models.CharField(max_length=100, editable=True, blank=True)
   
   def __str__(self):
-    return f'{self.name}'
+    return f'{self.name} project'

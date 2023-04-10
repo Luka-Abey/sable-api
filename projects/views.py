@@ -20,16 +20,17 @@ class ProjectsView(APIView):
 
 class SingleProjectView(APIView):
   def get(self, request, *args, **kwargs):
-    this_project_name = decode(self.kwargs['id'])
-    this_project = Project.objects.get(name=this_project_name)
-    serializer = ProjectSerializer(this_project, many=False)
+    this_blog_name = decode(self.kwargs['id'])
+    this_blog = Project.objects.get(name=this_blog_name)
+    serializer = ProjectSerializer(this_blog, many=False)
     return Response(serializer.data)
 
 class SearchProjectsView(APIView):
   def get(self, request, *args, **kwargs):
     query_string = self.kwargs['search']
-    filtered_projects = Project.objects.filter(
-      Q(name__icontains=query_string)
+    filtered_blogs = Project.objects.filter(
+      Q(name__icontains=query_string) |
+      Q(author__icontains=query_string)
     )
-    serializer = AllProjectsSerializer(filtered_projects, many=True)
+    serializer = AllProjectsSerializer(filtered_blogs, many=True)
     return Response(serializer.data)
