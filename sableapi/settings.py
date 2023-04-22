@@ -57,7 +57,6 @@ INSTALLED_APPS = [
     'banner',
     'bannerplus',
     'blogs',
-    'projects',
     'projs',
 ]
 

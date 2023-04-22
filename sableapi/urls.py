@@ -19,7 +19,6 @@ from schedule.views import ScheduleView, CurrentShowView
 from bannerplus.views import BannerPlusView
 from residents.views import ResidentsView, SingleResidentView, SearchResidentsView
 from blogs.views import BlogsView, SingleBlogView, SearchBlogsView
-from projects.views import ProjectsView, SingleProjectView, SearchProjectsView
 from projs.views import ProjsView, SingleProjView, SearchProjsView
 
 urlpatterns = [
@@ -33,9 +32,6 @@ urlpatterns = [
     path('api/blogs', BlogsView.as_view()),
     path('api/blogs/<id>', SingleBlogView.as_view()),
     path('api/blogs/search/<search>', SearchBlogsView.as_view()),
-    path('api/projects', ProjectsView.as_view()),
-    path('api/projects/<id>', SingleProjectView.as_view()),
-    path('api/projects/search/<search>', SearchProjectsView.as_view()),
     path('api/projs', ProjsView.as_view()),
     path('api/projs/<id>', SingleProjView.as_view()),
     path('api/projs/search/<search>', SearchProjsView.as_view()),
