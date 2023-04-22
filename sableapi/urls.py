@@ -20,6 +20,7 @@ from bannerplus.views import BannerPlusView
 from residents.views import ResidentsView, SingleResidentView, SearchResidentsView
 from blogs.views import BlogsView, SingleBlogView, SearchBlogsView
 from projects.views import ProjectsView, SingleProjectView, SearchProjectsView
+from projs.views import ProjsView, SingleProjView, SearchProjsView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -35,4 +36,7 @@ urlpatterns = [
     path('api/projects', ProjectsView.as_view()),
     path('api/projects/<id>', SingleProjectView.as_view()),
     path('api/projects/search/<search>', SearchProjectsView.as_view()),
+    path('api/projs', ProjsView.as_view()),
+    path('api/projs/<id>', SingleProjView.as_view()),
+    path('api/projs/search/<search>', SearchProjsView.as_view()),
 ]

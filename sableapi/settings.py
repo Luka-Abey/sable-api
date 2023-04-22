@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'bannerplus',
     'blogs',
     'projects',
+    'projs',
 ]
 
 MIDDLEWARE = [
